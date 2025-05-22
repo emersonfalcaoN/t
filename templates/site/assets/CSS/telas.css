@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+/* Typical Device Breakpoints
+Pequenas telas: até 600px
+Celular: de 600px até 768px
+Tablet: de 768px até 992px
+Desktop: de 992px até 1200px
+Grandes telas: acima de 1200px
+*/
+
+/* Pequenas telas (até 600px) */
+body {
+  background-image: linear-gradient(to top, #007bff, #800080);
+}
+
+/* Celular (600px até 768px) */
+@media screen and (min-width: 600px) and (max-width: 768px) {
+  body {
+    background-image: linear-gradient(to top, #00b7eb, #4b0082);
+  }
+}
+
+/* Tablet (768px até 992px) */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  body {
+    background-image: linear-gradient(to top, #1e90ff 40%, #9932cc);
+  }
+
+  section#login {
+    width: 90vw;
+    height: 550px;
+  }
+
+  section#login > div#imagem {
+    float: left;
+    width: 40%;
+    height: 100%;
+  }
+
+  section#login > div#formulario {
+    float: right;
+    width: 60%;
+  }
+}
+
+/* Desktop (992px até 1200px) */
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  body {
+    background-image: linear-gradient(to top, #1573dd 35%, #6a0dad);
+  }
+}
+
+/* Grandes telas (acima de 1200px) */
+@media screen and (min-width: 1200px) {
+  body {
+    background-image: linear-gradient(to top, #004aad 26%, #800080);
+  }
+
+  section#login {
+    width: 90vw; /* Ajustado para manter proporção */
+    height: 650px; /* Mantido para aproveitar o espaço vertical */
+  }
+
+  section#login > div#imagem {
+    float: left;
+    width: 40%; /* Proporção ajustada para igualar o tablet */
+    height: 100%;
+  }
+
+  section#login > div#formulario {
+    float: right;
+    width: 60%; /* Proporção ajustada */
+  }
+}

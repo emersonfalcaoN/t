@@ -1,0 +1,205 @@
+@charset "UTF-8";
+/*
+azul marinho "PP1304" (#063F80)
+Branco "FFFFFF" (#FFFFFF)
+vermelho "7b0009" (#7B0009)
+*/
+* {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  background: linear-gradient(135deg, #1e2a44, #063f80);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+}
+
+.main-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section#login {
+  background: linear-gradient(135deg, #063f80, #0a1f4d);
+  width: 300px;
+  height: 500px;
+  border-radius: 20px;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.7);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  overflow: hidden;
+}
+
+section#login:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.8);
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+section#login > div#imagem {
+  background: url(../midia/imagens/pc.jpg) no-repeat center center;
+  background-size: cover;
+  height: 180px;
+  border-radius: 20px 20px 0 0;
+  transition: opacity 0.5s ease;
+  overflow: hidden;
+}
+
+.image-slide {
+  opacity: 0;
+  animation: slideIn 0.8s ease forwards;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+section#login > div#formulario {
+  padding: 20px;
+  color: #ffffff;
+  height: calc(100% - 180px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.form-container {
+  border-radius: 0 0 20px 20px;
+}
+
+section#login > div#formulario > h1 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 2em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.title-slide {
+  opacity: 0;
+  animation: slideIn 1s ease forwards 0.2s;
+}
+
+section#login > div#formulario > p {
+  font-size: 0.9em;
+  margin-bottom: 15px;
+  line-height: 1.4;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.text-slide {
+  opacity: 0;
+  animation: slideIn 1s ease forwards 0.4s;
+}
+
+.campo {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.campo label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 0.9em;
+  color: #a9bfd7;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.campo input:focus ~ label,
+.campo input:valid ~ label {
+  top: -2px;
+  font-size: 0.75em;
+  color: #000000;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.2);
+  font-size: 0.9em;
+  transition: box-shadow 0.3s ease;
+}
+
+.input-field:focus {
+  box-shadow: 0 0 10px rgba(123, 0, 9, 0.5);
+}
+
+.botao {
+  width: 100%;
+  padding: 12px;
+  background-color: #ffffff;
+  color: #063f80;
+  border: none;
+  border-radius: 12px;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hover-scale {
+  transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+  background-color: #7b0009;
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+.esqueci-senha {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.esqueci-senha a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.8em;
+  transition: color 0.3s ease;
+}
+
+.hover-link:hover {
+  color: #7b0009;
+  text-decoration: underline;
+}
